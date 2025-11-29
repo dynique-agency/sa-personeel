@@ -7,7 +7,6 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export default function Sectoren() {
-  // Alle sectoren
   const sectoren = [
     {
       id: 'operators-productie',
@@ -72,7 +71,7 @@ export default function Sectoren() {
       voorWerkgevers: 'Resultaatgerichte salesprofessionals die uw omzet verhogen.',
       voorTalenten: 'Uitdagende salesfuncties met onbeperkte groeimogelijkheden.'
     }
-  ]
+  ];
 
   return (
     <main className="min-h-screen bg-white">
@@ -208,7 +207,7 @@ export default function Sectoren() {
                       Bekijk Vacatures
                     </Link>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -346,6 +345,5 @@ export default function Sectoren() {
 
       <Footer />
     </main>
-  )
+  );
 }
-

@@ -7,7 +7,6 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export default function Sectoren() {
-  // Sectoren data
   const sectoren = [
     {
       id: 'operators-productie',
@@ -73,7 +72,6 @@ export default function Sectoren() {
       voorTalenten: 'Uitdagende salesfuncties met onbeperkte groeimogelijkheden.'
     }
   ]
-
   return (
     <main className="min-h-screen bg-white">
       <Header />

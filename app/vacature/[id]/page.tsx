@@ -9,6 +9,9 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { vacatures } from '@/data/vacatures'
 
+// Edge Runtime voor Cloudflare Pages
+export const runtime = 'edge'
+
 export default function VacatureDetail() {
   const params = useParams()
   const vacatureId = params.id as string

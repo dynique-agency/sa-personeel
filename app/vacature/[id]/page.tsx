@@ -1,7 +1,12 @@
 import VacatureClient from './VacatureClient'
+import { vacatures } from '@/data/vacatures'
 
-// Edge Runtime voor Cloudflare Pages (vereist voor dynamische routes)
-export const runtime = 'edge'
+// Pre-generate all vacancy pages at build time
+export async function generateStaticParams() {
+  return Object.keys(vacatures).map((id) => ({
+    id: id,
+  }))
+}
 
 interface PageProps {
   params: Promise<{
@@ -10,13 +15,6 @@ interface PageProps {
 }
 
 export default async function VacatureDetail({ params }: PageProps) {
-  let vacatureId = ''
-  try {
-    const resolvedParams = await params
-    vacatureId = resolvedParams.id
-  } catch (error) {
-    console.error('Error resolving params:', error)
-  }
-
-  return <VacatureClient vacatureId={vacatureId} />
+  const { id } = await params
+  return <VacatureClient vacatureId={id} />
 }

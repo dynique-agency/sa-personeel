@@ -54,6 +54,38 @@ Geen environment variables nodig.
 - Video's worden lazy-loaded voor optimale performance
 - Forms gebruiken FormSubmit.co (geen backend nodig)
 
+## Na Deployment
+
+### Waar vind je je website URL?
+
+1. Ga naar je **Cloudflare Dashboard**
+2. Klik op **Pages** in het linkermenu
+3. Klik op je project: **sa-personeel**
+4. Je ziet nu de **Production** deployment
+5. De URL staat bovenaan: `https://sa-personeel-XXXXX.pages.dev`
+
+### Deployment Status
+
+- **Building**: Deployment is bezig (kan 2-5 minuten duren)
+- **Success**: Deployment is klaar, website is live
+- **Failed**: Er is een fout opgetreden, check de logs
+
+### Website is nog niet bereikbaar?
+
+1. **Wacht 2-3 minuten** - De eerste deployment kan langer duren
+2. **Check de deployment status** - Zorg dat deze op "Success" staat
+3. **Refresh de pagina** - Soms moet je de browser cache legen
+4. **Check de logs** - Als er errors zijn, zie je deze in de deployment logs
+
+### Custom Domain Toevoegen
+
+Na de eerste deployment kun je een custom domain toevoegen:
+1. Ga naar je project in Cloudflare Pages
+2. Klik op **Custom domains** tab
+3. Klik op **Set up a custom domain**
+4. Voer je domain in (bijv. `sapersoneel.nl`)
+5. Volg de DNS instructies
+
 ## Custom Domain (Optioneel)
 
 Na deployment kun je een custom domain toevoegen:

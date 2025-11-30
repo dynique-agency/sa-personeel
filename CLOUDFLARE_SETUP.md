@@ -11,12 +11,12 @@ Selecteer: **Next.js**
 
 **Build command:**
 ```
-npx @cloudflare/next-on-pages@1
+npm run build
 ```
 
 **Build output directory:**
 ```
-.vercel/output/static
+.next
 ```
 
 **Root directory (optional):**

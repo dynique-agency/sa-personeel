@@ -5,18 +5,18 @@
 Bij het aanmaken van een nieuwe deployment in Cloudflare Pages, vul de volgende instellingen in:
 
 ### Framework Preset
-Selecteer: **Next.js (Static HTML Export)**
+Selecteer: **Next.js**
 
 ### Build Configuratie
 
 **Build command:**
 ```
-npm run build
+npx @cloudflare/next-on-pages@1
 ```
 
 **Build output directory:**
 ```
-.next
+.vercel/output/static
 ```
 
 **Root directory (optional):**

@@ -1,0 +1,11 @@
+# Cloudflare Pages ignore - exclude large cache files
+.next/cache/
+node_modules/
+.git/
+*.log
+*.png
+*.md
+!README.md
+wrangler.toml
+.nvmrc
+

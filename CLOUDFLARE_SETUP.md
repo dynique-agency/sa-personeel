@@ -19,6 +19,11 @@ npm run build
 .next
 ```
 
+**BELANGRIJK:** 
+- Als je de **Next.js** framework preset gebruikt, laat de build output directory **LEEG** - Cloudflare Pages detecteert dit automatisch
+- Als je handmatig een directory moet opgeven, gebruik dan `.next`
+- De `wrangler.toml` file bevat al `pages_build_output_dir = ".next"` voor automatische detectie
+
 **Root directory (optional):**
 ```
 /

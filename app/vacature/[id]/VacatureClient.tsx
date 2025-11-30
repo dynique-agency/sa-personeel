@@ -1,18 +1,25 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { vacatures } from '@/data/vacatures'
 
 interface VacatureClientProps {
-  vacature: any
   vacatureId: string
 }
 
-export default function VacatureClient({ vacature, vacatureId }: VacatureClientProps) {
+export default function VacatureClient({ vacatureId }: VacatureClientProps) {
+  const [vacature, setVacature] = useState<any>(null)
+
+  useEffect(() => {
+    if (vacatureId) {
+      setVacature(vacatures[vacatureId] || null)
+    }
+  }, [vacatureId])
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     naam: '',
